@@ -24,26 +24,32 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda m: m.text == "Men haqimda")
 def aboutme_handler(message):
-    text = "O'quvchi"
+    text = "O'quvchis "
     
-    bot.send_message(message.chat.id, text)
+    bot.send_message(message.chat.id, text, reply_markup=keyboard)
 
 @bot.message_handler(func=lambda m: m.text == "Loyihalarim")
 def projects_handler(message):
     text = "Bu qism tez orada qo'shiladi"
     
-    bot.send_message(message.chat.id, text)
+    bot.send_message(message.chat.id, text, reply_markup=keyboard)
 
 @bot.message_handler(func=lambda m: m.text == "Bog'lanish")
 def contact_handler(message):
     text = "Bog'lanish ma'lumotlari"
+    keyboard = types.InlineKeyboardMarkup()
+    btn1 = types.InlineKeyboardButton("Telegram", url="https://t.me/q0d1rva")
+    btn2 = types.InlineKeyboardButton("Github", url="https://github.com/QodirovaKumushoy")
+    keyboard.add(btn1, btn2)
     
-    bot.send_message(message.chat.id, text)
+    bot.send_message(message.chat.id, text, reply_markup=keyboard)
+    
+    bot.send_message(message.chat.id, text, reply_markup=keyboard)
 
 @bot.message_handler(func=lambda m: m.text == "Qobiliyatlarim")
 def skills_handler(message):
     text = "Qobiliyatlarim haqida ma'lumot"
     
-    bot.send_message(message.chat.id, text)
+    bot.send_message(message.chat.id, text, reply_markup=keyboard)
 
 bot.infinity_polling()
