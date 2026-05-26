@@ -38,8 +38,8 @@ def projects_handler(message):
 def contact_handler(message):
     text = "Bog'lanish ma'lumotlari"
     keyboard = types.InlineKeyboardMarkup()
-    btn1 = types.InlineKeyboardButton("Telegram", url="https://t.me/q0d1rva")
-    btn2 = types.InlineKeyboardButton("Github", url="https://github.com/QodirovaKumushoy")
+    btn1 = types.InlineKeyboardButton("Telegram", url="")
+    btn2 = types.InlineKeyboardButton("Github", url="https://github.com/charosqadirova")
     keyboard.add(btn1, btn2)
     
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
