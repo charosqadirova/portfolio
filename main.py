@@ -5,7 +5,7 @@ import os
 
 load_dotenv()
 
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = os.getenv("TOKEN")
 
 bot = telebot.TeleBot(TOKEN, parse_mode=None)
 
@@ -18,7 +18,7 @@ def send_welcome(message):
     btn4 = types.KeyboardButton("Qobiliyatlarim")
     keyboard.add(btn1, btn2)
     keyboard.add(btn3, btn4)
-    text = "Assalom alaykum, men Asadbek Rakhimov. \nBu mening portfolio botim. \nQuyidagi bo'limlardan birini tanlang"
+    text = "telegram botiga xush kelibsiz! Quyidagi tugmalardan birini tanlang:"
 
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
 
