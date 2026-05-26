@@ -18,7 +18,7 @@ def send_welcome(message):
     btn4 = types.KeyboardButton("Qobiliyatlarim")
     keyboard.add(btn1, btn2)
     keyboard.add(btn3, btn4)
-    text = "telegram botiga xush kelibsiz!/n Quyidagi tugmalardan birini tanlang:"
+    text = "telegram botiga xush kelibsiz! /n Quyidagi tugmalardan birini tanlang:"
 
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
 
